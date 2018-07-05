@@ -1,0 +1,379 @@
+// Welcome
+
+.welcome
+  min-height: 895px
+  width: 100%
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: bottom
+  position: relative
+  top: 0
+  padding-top: 325px
+  &__title
+    width: 490px
+    max-width: 100%
+    padding-left: 62px
+    position: relative
+    margin-bottom: 72px
+    .line
+      position: absolute
+      left: 0
+      width: 3px
+      height: 100%
+      background-color: #e35558
+    .title
+      color: $color_white
+      font-size: 48px
+      font-weight: 400
+      line-height: 48px
+      text-transform: uppercase
+  &__text
+    width: 415px
+    max-width: 100%
+    margin-bottom: 76px
+    p
+      color: $color_white
+      font-size: 16px
+      font-weight: 500
+      line-height: 24px
+
+// Category
+
+.category
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+
+.category_item
+  cursor: pointer
+  width: 50%
+  background-size: cover
+  background-repeat: no-repeat
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  min-height: 450px
+  position: relative
+  transition: $transition
+  &__icon
+    z-index: 3
+    margin-bottom: 30px
+  &__title
+    text-align: center
+    min-width: 225px
+    z-index: 3
+    position: relative
+    padding: 10px 0
+    .line_top
+      position: absolute
+      content: ''
+      width: 100%
+      border-top: 2px solid $color_white
+      top: 0
+      left: 0
+    .line_bottom
+      position: absolute
+      content: ''
+      width: 100%
+      border-top: 2px solid $color_white
+      bottom: 0
+      right: 0
+    .title
+      color: $color_white
+      font-size: 36px
+      font-weight: 400
+      line-height: 40px
+      text-transform: uppercase
+  &:after
+    position: absolute
+    content: ''
+    width: 0
+    height: 0
+    border: 0 solid rgba(255, 255, 255, 0.34)
+    z-index: 2
+    transition: $transition
+  &:before
+    position: absolute
+    content: ''
+    height: 0
+    width: 0
+    left: 50%
+    z-index: 1
+    background-color: rgba(224, 30, 30, 0.8)
+    transition: $transition
+  &:hover
+    transition: $transition
+    &:before
+      left: 0
+      height: 100%
+      width: 100%
+    &:after
+      height: 95%
+      width: 95%
+      border: 2px solid rgba(255, 255, 255, 0.34)
+
+// Affiliates
+
+.affiliates
+  position: relative
+  padding: 60px 0 90px 0
+  &__pseudo
+    width: 100%
+    position: absolute
+    bottom: -44px
+    display: flex
+    flex-direction: column
+    align-items: center
+    &:after
+      position: relative
+      content: ''
+      width: 24px
+      height: 44px
+      background-color: #ff5c5c
+    &:before
+      position: relative
+      content: ''
+      width: 24px
+      height: 44px
+      background-color: #394560
+  &__title
+    margin-bottom: 30px
+    text-align: center
+    .title
+      color: #38445e
+      font-size: 30px
+      font-weight: 400
+      line-height: 40px
+      text-transform: uppercase
+    img
+      padding-top: 20px
+
+.affiliates_list
+  &__titles
+    display: flex
+    justify-content: space-between
+    background-color: #f4f5f7
+    padding: 0 0 0 30px
+    .title
+      text-align: left
+      width: 20%
+      color: #38445e
+      font-size: 14px
+      font-weight: 400
+      line-height: 40px
+      text-transform: uppercase
+
+.affiliates_item
+  padding: 18px 0
+  display: flex
+  justify-content: space-between
+  border-bottom: 2px solid #f4f5f7
+  div
+    width: 20%
+  &__number
+    margin-left: 36px
+    span
+      background: url("../img/icon_ball.svg") no-repeat
+      background-size: cover
+      width: 61px
+      height: 61px
+      display: flex
+      align-items: center
+      justify-content: center
+      color: $color_red
+      font-size: 30px
+      font-weight: 300
+      line-height: 40px
+      text-transform: uppercase
+  &__text
+    p
+      color: #38445e
+      font-size: 14px
+      font-weight: 100
+      line-height: 20px
+      b
+        color: #38445e
+        font-size: 18px
+        font-weight: 700
+        line-height: 20px
+  &__rate
+    p
+      display: flex
+      i
+        margin-right: 2px
+    .fa-star
+      color: $color_red
+
+// Testimonials
+
+.testimonials
+  background-attachment: fixed
+  background-repeat: no-repeat
+  background-position: center top
+  background-size: cover
+  margin-left: auto
+  margin-right: auto
+  margin-bottom: 0
+  width: 100%
+  padding: 82px 0 112px 0
+  &__title
+    margin-bottom: 30px
+    text-align: center
+    .title
+      color: $color_white
+      font-size: 30px
+      font-weight: 400
+      line-height: 40px
+      text-transform: uppercase
+    img
+      padding-top: 20px
+  &__text
+    text-align: center
+    margin-bottom: 50px
+    p
+      width: 762px
+      max-width: 100%
+      margin: 0 auto
+      color: $color_white
+      font-weight: 400
+      line-height: 24px
+  &__icon
+    width: 95px
+    height: auto
+    margin: 0 auto 20px auto
+  &__name
+    text-align: center
+    .title
+      color: $color_white
+      font-weight: 500
+      line-height: 24px
+      font-size: 18px
+
+.swiper-container
+  .swiper-button-prev
+    transform: rotate(180deg)
+  .swiper-button-prev,
+  .swiper-button-next
+    background-image: none
+
+// Questions
+
+.questions
+  padding: 63px 0 93px 0
+  background-color: #f6f8fc
+  &__title
+    margin-bottom: 30px
+    text-align: center
+    .title
+      color: #38445e
+      font-size: 30px
+      font-weight: 400
+      line-height: 40px
+      text-transform: uppercase
+    img
+      padding-top: 20px
+  &__text
+    margin-bottom: 48px
+    text-align: center
+    p
+      width: 600px
+      max-width: 100%
+      margin: 0 auto
+      height: 42px
+      color: #38445e
+      font-size: 18px
+      font-weight: 300
+      line-height: 24px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    align-items: flex-start
+
+.questions_tab
+  width: 600px
+  max-width: 100%
+  margin: 0 auto 40px auto
+  display: flex
+  justify-content: space-between
+  a
+    display: flex
+    align-items: center
+    justify-content: center
+    color: $color_red
+    font-size: 14px
+    font-weight: 400
+    line-height: 40px
+    text-transform: uppercase
+    position: relative
+    &:before
+      width: 100%
+      padding: 15px 45px
+      position: absolute
+      content: ''
+      border: 1px solid $color_red
+
+.question_item
+  display: none
+  padding: 30px 43px
+  margin-bottom: 30px
+  width: 570px
+  max-width: 100%
+  min-height: 156px
+  box-shadow: 0 16px 51px rgba(109, 125, 156, 0.11)
+  background-color: $color_white
+  position: relative
+  &__active
+    display: block
+  &__open
+    width: 420px
+    max-width: 100%
+    p
+      color: #343c4e
+      font-size: 16px
+      font-weight: 500
+      line-height: 24px
+  .visible
+    display: block
+    visibility: visible
+  &__hidden
+    display: none
+    visibility: hidden
+    padding-top: 20px
+    width: 420px
+    max-width: 100%
+    p
+      color: #343c4e
+      font-size: 14px
+      font-weight: 300
+      line-height: 20px
+  &__icon
+    cursor: pointer
+    position: absolute
+    width: 42px
+    height: 42px
+    right: 23px
+    bottom: 30px
+    display: flex
+    &:before
+      position: absolute
+      content: ''
+      background-color: #ff5d5d
+      width: 42px
+      height: 2px
+      top: 48%
+    &:after
+      position: absolute
+      content: ''
+      background-color: #ff5d5d
+      width: 2px
+      height: 42px
+      top: 0
+      left: 48%
+      transition: $transition
+  .active
+    &:after
+      height: 0
+      top: 48%
+      transition: $transition

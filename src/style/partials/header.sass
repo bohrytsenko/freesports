@@ -1,0 +1,115 @@
+// Header
+
+.header
+  padding-top: 45px
+  position: absolute
+  width: 100%
+  z-index: 1
+  &__simple
+    padding-bottom: 40px
+    background-color: $color_black
+  &__top
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+.header_top
+  min-height: 80px
+  border-top: 5px solid #ed6762
+  border-bottom: 13px solid #ed6762
+  position: relative
+  &__logo
+    position: absolute
+    left: 0
+    top: -19px
+  &__nav
+    ul
+      padding: 0
+      margin: 0
+      display: flex
+      li
+        transition: $transition
+        margin: 0 10px
+        position: relative
+        &:first-child
+          margin-left: 0
+        &:last-child
+          margin-right: 0
+        &:before
+          width: 0
+          content: ''
+          position: absolute
+          height: 13px
+          top: 51px
+          background-color: $color_white
+          bottom: 0
+          transition: $transition
+        &:hover
+          transition: $transition
+          &:before
+            width: 100%
+        a
+          color: $color_white
+          font-size: 14px
+          font-weight: 400
+          line-height: 40px
+          text-transform: uppercase
+
+.nav_mobile
+  .active
+    right: 15px
+    position: fixed
+    &:before
+      top: 50%
+      transform: rotate(45deg)
+      transition: $transition
+    &:after
+      top: 50%
+      bottom: inherit
+      transform: rotate(135deg)
+      transition: $transition
+  &__icon
+    z-index: 10
+    cursor: pointer
+    position: relative
+    right: 0
+    width: 30px
+    height: 20px
+    &:before
+      position: absolute
+      content: ''
+      top: 0
+      width: 100%
+      height: 2px
+      background-color: $color_white
+      transition: $transition
+    &:after
+      position: absolute
+      content: ''
+      bottom: 0
+      width: 100%
+      height: 2px
+      background-color: $color_white
+      transition: $transition
+  .show
+    right: -30%
+    transition: $transition
+  ul
+    position: fixed
+    right: -200%
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: $color_black
+    display: flex
+    flex-direction: column
+    padding: 30px
+    transition: $transition
+    z-index: 7
+    li
+      margin: 0
+      &:before
+        display: none
+      a
+        font-size: 20px
+

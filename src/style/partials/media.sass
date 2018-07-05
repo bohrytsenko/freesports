@@ -1,0 +1,102 @@
+$r-768: 768px
+$r-992: 992px
+$r-1024: 1024px
+$r-1200: 1200px
+
+body
+  // Break max-768
+  @media only screen and (max-width: $r-768 - 1)
+    .show_mobile
+      display: block
+    .show_desctop
+      display: none
+    .welcome
+      min-height: inherit
+      padding: 180px 0 50px 0
+    .welcome__title
+      padding-left: 20px
+    .welcome__title .title
+      font-size: 34px
+    .btn_red
+      margin: 0 auto
+    .header_top
+      border-top: 0
+      border-bottom: 0
+    .category_item
+      width: 100%
+      z-index: 0
+    .swiper-container
+      z-index: 0
+    .affiliates_list__titles
+      display: none
+    .affiliates_item
+      flex-direction: column
+      div
+        width: 100%
+      &__number span
+        margin: 0 auto 20px auto
+      &__logo,
+      &__text,
+      &__rate
+        margin: 0 auto 20px auto!important
+        text-align: center
+        p
+          text-align: center
+          justify-content: center
+      &__btn
+        margin: 0 auto
+    .testimonials
+      background-attachment: inherit
+    .swiper-button-next,
+    .swiper-button-prev
+      display: none
+    .questions_tab
+      flex-wrap: wrap
+      margin-top: 30px
+      padding-top: 30px
+      a
+        width: 48%
+        &:before
+          padding: 15px 0
+    .question_item
+      width: 100% !important
+    .footer_wrap
+      flex-wrap: wrap
+    .footer_item
+      width: 100%
+      margin-bottom: 50px
+    .more_item
+      width: 100%
+
+  // Break max-1024
+  @media only screen and (max-width: $r-1024 - 1)
+    .affiliates_item__number,
+    .affiliates_item__logo,
+    .affiliates_item__text,
+    .affiliates_item__text,
+    .affiliates_item__rate
+      margin: 0 20px 0 0
+    .question_item__icon
+      right: 5px
+      bottom: 5px
+      width: 30px
+      height: 30px
+      &:before
+        width: 30px
+      &:after
+        height: 30px
+    .footer_item__nav ul
+      li
+        margin: 0 5px
+        a
+          font-size: 12px
+
+  // break max-1200
+  @media only screen and (max-width: $r-1200 - 1)
+    .container
+      padding: 0 15px
+    .question_item
+      width: 48%
+    .question_item__open,
+    .question_item__hidden
+      width: 340px

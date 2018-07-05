@@ -1,0 +1,97 @@
+// Colors
+
+$color_white: #fff
+$color_red: #e24747
+$color_black: #444752
+
+// Decoration
+
+$transition: 0.5s
+
+body
+  background-color: #fff
+  font-family: 'Roboto', sans-serif
+
+.overflow
+  height: 100%
+  width: 100%
+
+
+a
+  text-decoration: none
+  &:hover,
+  &:focus
+    text-decoration: none
+
+p,
+li a
+  margin: 0
+
+li
+  list-style: none
+
+img
+  max-width: 100%
+  height: auto
+
+*
+  box-sizing: border-box
+
+.show_mobile
+  display: none
+
+.container
+  margin: 0 auto
+  width: 1170px
+  max-width: 100%
+
+.title
+  margin: 0
+
+.btn_red
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 262px
+  max-width: 100%
+  height: 41px
+  box-shadow: 0 7px 12px rgba(208, 58, 58, 0.45)
+  border-radius: 2px
+  background-color: $color_red
+  color: $color_white
+  font-size: 14px
+  font-weight: 700
+  text-transform: uppercase
+  transition: $transition
+  &:hover
+    transition: $transition
+    color: $color_red
+    background-color: $color_white
+    box-shadow: 7px 7px 12px rgba(208, 58, 58, 0.45)
+
+// Preloader
+
+.overlay
+  z-index: 10
+  background-color: $color_black
+  background-attachment: fixed
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  display: flex
+  justify-content: center
+  align-items: center
+
+.overlay-loader
+  text-align: center
+  font-size: 80px
+  text-transform: uppercase
+  color: $color_white
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  width: max-content
+  margin: 0 auto
